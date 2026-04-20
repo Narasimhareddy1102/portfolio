@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-2: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--accent-2);
+      animation: fadeDown 0.8s ease;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 22px;
+      margin: 18px 0;
+      border-radius: 14px;
+      border: 1px solid var(--accent-2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+
+    p, ul {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffffff;
+      border-top: 1px solid var(--accent-2);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Narasimhareddy Thalapareddy</h1>
+  <p>AI & Data Science Student | Machine Learning Enthusiast</p>
+  <a href="#contact" class="btn">Contact Me</a>
+  <br>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am an AI & Data Science student passionate about machine learning and solving real-world problems. I aim to pursue higher studies and contribute to AI research.</p>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, JavaScript</li>
+      <li>Machine Learning (Scikit-learn, Pandas)</li>
+      <li>HTML, CSS, MERN Stack</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Projects</h2>
+
+    <h3>Heart Disease Prediction</h3>
+    <p>
+      Built a machine learning model using Python and Scikit-learn.<br>
+      Accuracy: 85%<br>
+      Dataset: UCI Heart Dataset
+    </p>
+
+    <h3>House Renting App</h3>
+    <p>
+      Developed a full-stack MERN application for house rentals.<br>
+      Features: User login, property listing, booking system
+    </p>
+
+  </div>
+
+  <div class="card">
+    <h2>Education</h2>
+    <p><strong>B.Tech in AI & Data Science</strong><br>
+    Dhanalakshmi College of Engineering (2021 – 2025)<br>
+    CGPA: <strong>7.99/10</strong></p>
+
+    <p><strong>Class 12</strong><br>
+    Municipal Junior College<br>
+    Percentage: <strong>86.6%</strong></p>
+
+    <p><strong>Class 10</strong><br>
+    K.N.R Municipal High School<br>
+    GPA: <strong>9.2/10</strong></p>
+  </div>
+
+  <div class="card">
+    <h2>Certifications & Internships</h2>
+
+    <h3>Machine Learning Internship</h3>
+    <p>
+      Organization: Pantech Prolabs India Pvt Ltd<br>
+      Duration: 1 Month<br>
+      Description: Worked on machine learning models and data analysis tasks.<br>
+      <a href="https://drive.google.com/file/d/1OQQsSUO28Nk88TDnxutXSOvqCJ1hb7eY/view?usp=drivesdk" class="btn">View Certificate</a>
+    </p>
+
+    <h3>Google Data Analytics</h3>
+    <p>
+      Platform: Coursera<br>
+      Description: Learned data analysis using Python, Pandas, and NumPy.<br>
+      <a href="https://drive.google.com/file/d/1IN2wWMSPYJJ0stUEjtUWtuWNqj7d-MH9/view?usp=drivesdk" class="btn">View Certificate</a>
+    </p>
+
+    <h3>Python Certification</h3>
+    <p>
+      Platform: Guvi<br>
+      Description: Developed foundational coding skills, data structures, and problem-solving skills.<br>
+      <a href="https://drive.google.com/file/d/141Ydm8PW6xZ0mu46oITsoaLPfUAJzu7d/view?usp=drivesdk" class="btn">View Certificate</a>
+    </p>
+
+  </div>
+
+  <div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Narasimhareddy1102@gmail.com">Narasimhareddy1102@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Narasimhareddy1102">github.com/Narasimhareddy1102</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Portfolio</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
