@@ -98,7 +98,25 @@
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+</style>
 </head>
 
 <body>
@@ -130,18 +148,30 @@
   <div class="card">
     <h2>Projects</h2>
 
-    <h3>Heart Disease Prediction</h3>
+    <h3 onclick="toggleGallery('gallery1')" style="cursor:pointer;">Heart Disease Prediction (Click to view outputs)</h3>
     <p>
-      Description: Built a machine learning model using Python and Scikit-learn.<br>
+      Built a machine learning model using Python and Scikit-learn.<br>
       Accuracy: 85%<br>
       Dataset: UCI Heart Dataset
     </p>
 
-    <h3>House Renting App</h3>
+    <div id="gallery1" class="gallery" style="display:none;">
+      <img src="project1-1.png" alt="Output 1">
+      <img src="project1-2.png" alt="Output 2">
+      <img src="project1-3.png" alt="Output 3">
+    </div>
+
+    <h3 onclick="toggleGallery('gallery2')" style="cursor:pointer;">House Renting App (Click to view outputs)</h3>
     <p>
-      Description: Developed a full-stack MERN application for house rentals.<br>
+      Developed a full-stack MERN application for house rentals.<br>
       Features: User login, property listing, booking system
     </p>
+
+    <div id="gallery2" class="gallery" style="display:none;">
+      <img src="project2-1.png" alt="Output 1">
+      <img src="project2-2.png" alt="Output 2">
+      <img src="project2-3.png" alt="Output 3">
+    </div>
 
   </div>
 
@@ -151,7 +181,7 @@
     Dhanalakshmi College of Engineering (2021 – 2025)<br>
     CGPA: <strong>7.99/10</strong></p>
 
-    <p><strong>Class 12</strong><br>
+    <p><strong>Class 12(Intermediate)</strong><br>
     Municipal Junior College<br>
     Percentage: <strong>86.6%</strong></p>
 
@@ -196,7 +226,7 @@
 </div>
 
 <footer>
-  <p>© 2026 Narasimhareddy</p>
+  <p>© 2026 Portfolio</p>
 </footer>
 
 <script>
@@ -209,6 +239,14 @@
     });
   }, { threshold: 0.2 });
   cards.forEach(card => observer.observe(card));
+function toggleGallery(id) {
+  const gallery = document.getElementById(id);
+  if (gallery.style.display === "none") {
+    gallery.style.display = "grid";
+  } else {
+    gallery.style.display = "none";
+  }
+}
 </script>
 
 </body>
